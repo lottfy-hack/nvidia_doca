@@ -1,0 +1,11 @@
+prefix=/opt/mellanox/doca
+libdir=${prefix}/lib/aarch64-linux-gnu
+includedir=${prefix}/include
+
+Name: doca_flow
+Description: DOCA (doca-flow) pkg-config file.
+Version: 2.7.0085
+Requires: doca-flow-lib
+Requires.private: libibverbs, libmlx5, doca-dpdk-bridge, doca-common
+Libs.private: -L${prefix}/lib/aarch64-linux-gnu -l:libdoca_flow_tune_server.a -l:libdoca_flow_ct.a -l:libdoca_flow.a -Wl,--as-needed -pthread -ldl /opt/mellanox/dpdk/lib/aarch64-linux-gnu/libmlx5dr_dev.a /opt/mellanox/dpdk/lib/aarch64-linux-gnu/libmlx5dr_dev.a -lm /opt/mellanox/dpdk/lib/aarch64-linux-gnu/libmlx5dr_dev.a
+Cflags: -I${includedir}

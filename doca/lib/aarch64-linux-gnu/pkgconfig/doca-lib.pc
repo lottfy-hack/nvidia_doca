@@ -1,0 +1,12 @@
+prefix=/opt/mellanox/doca
+libdir=${prefix}/lib/aarch64-linux-gnu
+includedir=${prefix}/include
+
+Name: doca_lib
+Description: Internal-only DOCA pkg-config file. Not for direct use.
+Use doca instead of this file
+Version: 2.7.0085
+Requires: doca-common-lib, doca-argp-lib, doca-dpdk-bridge-lib, doca-aes-gcm-lib, doca-dma-lib, doca-compress-lib, doca-telemetry-lib, doca-flow-lib, doca-erasure-coding-lib, doca-comch-lib, doca-comm-channel-lib, doca-apsh-lib, doca-sha-lib, doca-rdma-lib, doca-dpa-lib, doca-eth-lib, doca-pcc-lib, doca-devemu-lib, doca-urom-lib
+Libs: -Wl,--as-needed
+Libs.private: -lstdc++
+Cflags: -I${includedir} -DALLOW_EXPERIMENTAL_API

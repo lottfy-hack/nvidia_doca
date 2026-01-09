@@ -1,0 +1,11 @@
+prefix=/opt/mellanox/doca
+libdir=${prefix}/lib/aarch64-linux-gnu
+includedir=${prefix}/include
+
+Name: doca_pcc_lib
+Description: Internal-only DOCA pkg-config file. Not for direct use.
+Use doca-pcc instead of this file
+Version: 2.7.0085
+Libs: -L${prefix}/lib/aarch64-linux-gnu -ldoca_pcc
+Libs.private: -lstdc++
+Cflags: -I${includedir} -DALLOW_EXPERIMENTAL_API

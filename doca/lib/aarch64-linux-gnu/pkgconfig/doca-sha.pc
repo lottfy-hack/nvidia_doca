@@ -1,0 +1,11 @@
+prefix=/opt/mellanox/doca
+libdir=${prefix}/lib/aarch64-linux-gnu
+includedir=${prefix}/include
+
+Name: doca_sha
+Description: DOCA (doca-sha) pkg-config file.
+Version: 2.7.0085
+Requires: doca-sha-lib
+Requires.private: doca-common
+Libs.private: -L${prefix}/lib/aarch64-linux-gnu -l:libdoca_sha.a -Wl,--as-needed
+Cflags: -I${includedir}

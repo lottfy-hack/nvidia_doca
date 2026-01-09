@@ -1,0 +1,55 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# logs / temp
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# build outputs
+build/
+Build/
+out/
+dist/
+target/
+bin/
+obj/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.so.2
+*.so.*
+
+# archives / installers (通常不该进git)
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.dmg
+*.iso
+*.deb
+*.rpm# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+

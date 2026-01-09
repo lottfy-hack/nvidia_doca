@@ -1,0 +1,11 @@
+prefix=/opt/mellanox/doca
+libdir=${prefix}/lib/aarch64-linux-gnu
+includedir=${prefix}/include
+
+Name: doca_urom
+Description: DOCA (doca-urom) pkg-config file.
+Version: 2.7.0085
+Requires: doca-urom-lib
+Requires.private: ucx, doca-common
+Libs.private: -L${prefix}/lib/aarch64-linux-gnu -l:libdoca_urom_components_comm_ucp_rma.a -l:libdoca_urom_components_comm_ucp_am.a -l:libdoca_urom.a -Wl,--as-needed -ldl
+Cflags: -I${includedir}

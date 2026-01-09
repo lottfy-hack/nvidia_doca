@@ -1,0 +1,11 @@
+prefix=/opt/mellanox/doca
+libdir=${prefix}/lib/aarch64-linux-gnu
+includedir=${prefix}/include
+
+Name: doca_eth
+Description: DOCA (doca-eth) pkg-config file.
+Version: 2.7.0085
+Requires: doca-eth-lib
+Requires.private: libibverbs, libmlx5, doca-dpdk-bridge, doca-common
+Libs.private: -L${prefix}/lib/aarch64-linux-gnu -l:libdoca_eth.a -Wl,--as-needed
+Cflags: -I${includedir}
